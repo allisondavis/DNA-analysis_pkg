@@ -1,6 +1,7 @@
 #' @title CG content function
 #' @description This function allows you calculate the fraction of C and G content of a specified sequence.
 #' @param sequence a single vector of individual character
+#' @param wordsize the length of characters to include in nucleotide "word" search; for CG this is 2
 #' @param alphabet all characters within the seqence to analyze
 #' @keywords CG
 #' @export

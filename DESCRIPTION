@@ -3,7 +3,7 @@ Type: Package
 Title: DNA Analysis
 Version: 0.1.0
 Author: Caitlin Leslie and Allison Davis
-Maintainer: "acdavis@utexas.edu"
+Maintainer: Allison Davis <acdavis@utexas.edu>
 Description: This package is an introduction to DNA manipulation and analysis.
     Specifically, this package covers the following:
         Reading in DNA sequences
