@@ -7,10 +7,8 @@
 #' @export
 #' @examples
 #' CG(FISHsequence, wordsize= 2, alphabet= c("a", "c", "t", "g"))
-#'
-# CG content
-  #{seqinr} has a function to calculate the fraction of sequence that is GC, but not for CG. Here we create the equivalent function.
-  #This function prints the fraction of CG content in the specified sequence.
+
+
 CG <- function(sequence) {
 
   tot <- seqinr::count(sequence, wordsize = 2, alphabet = s2c("acgt"))
@@ -21,7 +19,7 @@ CG <- function(sequence) {
 }
 
 #' @title Sliding Widow Plot- GC or CG content
-#' @description This function allows you create a sliding window plot of both GC and CG content within a specified sequence
+#' @description This function allows you create a sliding window plot of both GC and CG content within a specified sequence; originally created by Avril Coghlan, from Little Book of R
 #' @param inputseq a single vector of individual character
 #' @param windowsize number of nucleotide sequences in a single step
 #' @keywords swp
@@ -30,12 +28,8 @@ CG <- function(sequence) {
 #' swp.GC(100, FISHsequence)
 #' swp.CG(100, FISHsequence)
 
-# Sliding window plot
-  #this function was created by Avril Coghlan, from Little Book of R
-  #A sliding plot window creates a graph of DNA "word" content against the sequence postion.
-    #by specifying a window size, the window moves section by section down the sequence calculating "word" content.
 
-#GC
+#' GC
 swp.GC <- function(windowsize, inputseq)
 {
   starts <- seq(1, length(inputseq)-windowsize, by = windowsize)
@@ -50,7 +44,7 @@ swp.GC <- function(windowsize, inputseq)
 }
 
 
-#CG
+#' CG
 swp.CG <- function(windowsize, inputseq)
 {
   starts <- seq(1, length(inputseq)-windowsize, by = windowsize)
